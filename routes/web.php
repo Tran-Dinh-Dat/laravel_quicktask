@@ -15,6 +15,4 @@ Route::get('/', function () {
     return redirect('tasks');
 });
 
-Route::group(['prefix' => 'tasks'], function () {
-    Route::get('/', 'TasksController@index')->name('index');
-});
+Route::resource('tasks', 'TasksController');
