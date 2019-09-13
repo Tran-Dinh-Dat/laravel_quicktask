@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Http\Controllers;
+use App;
+use Illuminate\Http\Request;
+use App\Models\Task;
+class TasksController extends Controller
+{
+   
+    public function index()
+    {
+        $tasks = Task::all();
+        return view('tasks.index', compact('tasks'));
+    }
+}
